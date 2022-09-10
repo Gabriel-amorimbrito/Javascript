@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+        <style>
+            div#area {
+                background-color: rgb(224, 200, 169);
+                font: normal 30pt Arial;
+                color: rgb(190, 3, 3);
+                width: 850px;
+                height: 850px;
+                line-height: 850px;
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+        <div id="area">
+        Lá vem a Gostosa...
+    </div>
+
+    <script>
+        var a  = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'A gostosa tem um enorme coração!'
+            a.style.background = 'blue'
+        }
+        function entrar(){
+            a.innerText = 'A gostosa vai descobrir o que ela tem!'
+            a.style.background = 'pink'
+        }
+        function sair(){
+            a.innerText = 'A gostosa fica linda de 4!'
+            a.style.background = 'yellow'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformando o ex009 de .js para .html</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidades</h1>
+    Você está vivendo no páis: <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id = "res">
+
+    </div>
+    <script>
+        var pais = window.document.querySelector('input#pais')
+
+        function verificar(){
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var ex = (pais.value)
+            res.innerHTML = `<p>Seu país atual é: <strong> ${ex}. </strong></p>`
+            if (ex == 'Brasil') {
+                res.innerHTML += `Você é brasileiro`
+            }
+            else 
+                res.innerHTML += `<p> Você é <strong> extrangeiro</strong>.</p>`
+            
+        }
+    </script>
+</body>
+</html>
